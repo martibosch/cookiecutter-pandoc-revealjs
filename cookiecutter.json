@@ -1,0 +1,23 @@
+{
+	"title": null,
+	"slug": "{{ cookiecutter.title|lower|replace(' ', '-')|replace('/', '-') }}",
+	"author": "Nick Groenen",
+	"theme": [
+		"black",
+		"white",
+		"league",
+		"sky",
+		"beige",
+		"simple",
+		"serif",
+		"blood",
+		"night",
+		"moon",
+		"solarized"
+	],
+	"date": "{% now 'local', '%B %d, %Y' %}",
+	"_copy_without_render": [
+		"reveal.js"
+	],
+	"_extensions": ["jinja2_time.TimeExtension"]
+}
