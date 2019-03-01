@@ -5,5 +5,5 @@ REVEALJS_VARIABLES =\
 
 html: $(patsubst %.md,%.html,$(wildcard *.md))
 
-%.html: %.md
+%.html: %.md Makefile
 	pandoc $(PANDOC_FLAGS) $(REVEALJS_VARIABLES) -s $< -o $@
