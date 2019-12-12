@@ -1,9 +1,13 @@
-PANDOC_FLAGS =\
-	-t revealjs --slide-level 1
-REVEALJS_VARIABLES =\
-	-V fragments=false -V transition=none -V controls=false -V slideNumber=false
+.PHONY: slides
 
-html: $(patsubst %.md,%.html,$(wildcard *.md))
+PANDOC_FLAGS = --slide-level {{ cookiecutter.slide_level }} \
+	-t revealjs -f markdown{% if cookiecutter.emojis == 'y' %}+emoji{% endif %}
+REVEALJS_VARIABLES = -V transition={{ cookiecutter.transition }} \
+	-V controls={{ cookiecutter.controls }} \
+	-V slideNumber={{ cookiecutter.slide_number }} \
+	-V revealjs-url={{ cookiecutter.revealjs_url }}
 
-%.html: %.md Makefile
+index.html: slides.md
 	pandoc $(PANDOC_FLAGS) $(REVEALJS_VARIABLES) -s $< -o $@
+
+slides: index.html

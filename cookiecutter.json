@@ -1,23 +1,42 @@
 {
-	"title": null,
-	"slug": "{{ cookiecutter.title|lower|replace(' ', '-')|replace('/', '-') }}",
-	"author": "Nick Groenen",
-	"theme": [
-		"black",
-		"white",
-		"league",
-		"sky",
-		"beige",
-		"simple",
-		"serif",
-		"blood",
-		"night",
-		"moon",
-		"solarized"
-	],
-	"date": "{% now 'local', '%B %d, %Y' %}",
-	"_copy_without_render": [
-		"reveal.js"
-	],
-	"_extensions": ["jinja2_time.TimeExtension"]
+    "title": null,
+    "slug": "{{ cookiecutter.title|lower|replace(' ', '-')|replace('/', '-') }}",
+    "author": "Martí Bosch",
+    "theme": [
+	"black",
+	"white",
+	"league",
+	"sky",
+	"beige",
+	"simple",
+	"serif",
+	"blood",
+	"night",
+	"moon",
+	"solarized"
+    ],
+    "slide_level": "2",
+    "emojis": "y",
+    "transition": [
+        "fade",
+        "slide",
+        "convex",
+        "concave",
+        "zoom",
+        "none"
+    ],
+    "controls": [
+        "true",
+        "false"
+    ],    
+    "slide_number": [
+        "true",
+        "false"
+    ],
+    "revealjs_url": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0",
+    "date": "{% now 'local', '%B %d, %Y' %}",
+    "_copy_without_render": [
+	"reveal.js"
+    ],
+    "_extensions": ["jinja2_time.TimeExtension"]
 }
