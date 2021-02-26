@@ -33,7 +33,7 @@
         "true",
         "false"
     ],
-    "revealjs_url": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0",
+    "revealjs_url": "https://unpkg.com/reveal.js@4.0.0",
     "date": "{% now 'local', '%B %d, %Y' %}",
     "_copy_without_render": [
 	"reveal.js"
